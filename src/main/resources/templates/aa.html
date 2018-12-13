@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>建设银行善付通支付</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <script type="text/javascript" src="/jquery.min.js"></script>
+</head>
+<body style="text-align:center">
+<!-- http://emall.ccb.com:8880/alliance/thirdPartAPI.php -->
+<form action="http://emall.ccb.com:8880/alliance/thirdPartAPI.php" method="POST" >
+    <span name = "ThirdSysID" ></span>
+</form>
+<script  th:inline="javascript">
+    $("span[name='ThirdSysID']").html([[${body}]]);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>建设银行善付通支付</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <script type="text/javascript" src="/jquery.min.js"></script>
+</head>
+<body style="text-align:center">
+<!-- http://emall.ccb.com:8880/alliance/thirdPartAPI.php -->
+<!--<form action="http://emall.ccb.com:8880/alliance/thirdPartAPI.php" method="POST" >-->
+<form action="http://mall.ccb.com/alliance/thirdPartAPI.php" method="POST"  hidden="hidden" >
+    <input type="text" name="ThirdSysID" value="" />
+    <input type="text" name="TxCode" value=""/>
+    <input type="text" name="RequestType" value=""/>
+    <input type="text" name="Data" value=""/>
+    <input type="text" name="Auth" value=""/>
+    <button type="submit">提交</button>
+</form>
+<script  th:inline="javascript">
+
+    $("input[name='ThirdSysID']").val([[${thirdSysId}]]);
+    $("input[name='TxCode']").val([[${txCode}]]);
+    $("input[name='RequestType']").val([[${requestType}]]);
+    $("input[name='Data']").val([[${data}]]);
+    $("input[name='Auth']").val([[${auth}]]);
+    //$('form').attr("action",[[${url}]]);
+    $('form').submit();
+</script>
+</body>
+</html>
