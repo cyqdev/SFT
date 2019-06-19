@@ -69,7 +69,7 @@ public class SftApplication {
 		String payId = request.getParameter("payId");
 		String payCode = request.getParameter("payCode");
 		String authKey = request.getParameter("authKey");
-		String url = "http://39.108.99.164/payment/unifiedOrder?authKey="+authKey;
+		String url = "http://o2o.hengan.com/payment/unifiedOrder?authKey="+authKey;
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("orderId", orderId);
 		map.put("payId", payId);
